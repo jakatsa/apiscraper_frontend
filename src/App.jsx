@@ -1,7 +1,17 @@
+import { HomePage } from "./components/Pages/HomePage";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Navigate,
+  Route,
+} from "react-router-dom";
 export default function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Navigate to="/HomePage" />} />
+        <Route path="/HomePage" element={<HomePage />} />
+      </Routes>
+    </Router>
+  );
 }
